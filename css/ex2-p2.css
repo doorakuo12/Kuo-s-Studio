@@ -305,6 +305,7 @@ nav a:hover {
 .collection-card h3 {
     margin: 0 auto;
     background: #df9dbb;
+    color: #ffffff;
     border-radius: 50px;
     text-align: center;
     padding: 5px 10px;

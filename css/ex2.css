@@ -1,202 +1,431 @@
 @import url('https://fonts.googleapis.com/css2?family=Slackey&display=swap');
 
-body{
+/* ==================================
+   基本設定與共用容器
+================================== */
+* {
+    box-sizing: border-box;
+}
+
+body {
     padding: 0;
     margin: 0;
     font-size: 1.2rem;
     font-family: "Slackey", sans-serif;
+    padding-top: 100px; /* 預留空間給 fixed header */
 }
 
-a{
+a {
     text-decoration: none;
-    color: rgba(69, 9, 32, 1);
+    color: #312B1D;
     display: inline-block;
+    transition: color 0.2s;
 }
 
-a:hover{
-    color: rgba(69, 9, 32, .5);
+a:hover {
+    color: #DB5D8F;
 }
 
-/*menu*/
-.menu{
-    width: 80%;
-    margin: auto;
-}
-
-/*logo*/
-.logo{
-    float: left;
-    width: 120px;
-}
-
-.logo img{
-    width: 80%;
-    display: block;
-    margin: auto;
-}
-
-/*nav*/
-nav{
-    background: #8DD85D;
-    position: sticky (top:0;)
-
-}
-
-nav a{
-    padding: 20px;
-    font-weight: bold;
-}
-
-nav a:hover{
-    text-decoration: underline;
-}
-
-/*hero一進畫面大圖＋字*/
-.hero{
-    position: relative;   
+/* ★ 共用容器，限制所有區塊最大寬度並自動置中 */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
     width: 100%;
-    height: 650px;
-    overflow: hidden;
 }
 
-.hero img{
-    width: 100%;
-    object-fit:cover;
+h1 {
+    color: #312B1D;
+    text-align: center;
+    margin-bottom: 40px;
 }
 
-/*header*/
-header{
+/* ==================================
+   Header 導覽列 (與分頁相同)
+================================== */
+header {
     position: fixed;
     top: 0;
     width: 100%;
-    height: auto;
+    background-color: #8DD85D;
     z-index: 200000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-/*section*/
-section{
-    clear: both;
-    width: 80%;
-    margin: auto;
-    margin-top: 50px;
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
 }
 
-section h1{
-    color:rgba(69, 9, 32, 1);
+.logo {
+    width: 100px;
+}
+
+.logo img {
+    width: 100%;
+    display: block;
+}
+
+nav a {
+    padding: 10px 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* ==================================
+   Hero 首圖
+================================== */
+.hero {
+    width: 100%;
+    height: 650px;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ==================================
+   自我介紹區塊
+================================== */
+.intro-section {
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+.intro-card {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.about-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
 }
 
-/*article*/
-article{
-	width:100%;
-    height: 500px;
-	margin:auto;
-    margin-bottom: 30px;
+.about-me img {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+/* 獨立出按鈕 class 讓排版更整齊 */
+.intro-btn {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto 15px;
+    padding: 10px;
+    color: #ffffff;
+    background: #DB5D8F;
+    border-radius: 50px;
+    font-size: 1.2rem;
+}
+
+.about-me p {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* ==================================
+   我的作品-橫向滾動卡片 (My Works)
+================================== */
+.works-carousel {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.works-track {
+    display: flex;
+    gap: 24px;
+    padding: 8px 10px 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.works-track::-webkit-scrollbar {
+    display: none;
+}
+
+.work-card {
+    flex: 0 0 280px;
+    padding: 18px;
+    background: #ffffff;
+    border: 3px solid #DBBBCE;
+    border-radius: 10px;
+    color: #CE8C48;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.25s ease;
+}
+
+.work-image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    background: #fff;
+}
+
+.work-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.35s ease;
+}
+
+.work-card:hover {
+    transform: scale(1.04);
+    background: #DBBBCE;
+    border: 3px solid #DBBBCE;
+}
+
+.work-card:hover .work-image img {
+    transform: scale(1.04);
+}
+
+.work-card h3 {
+    text-align: center;
+    margin: 8px 0 0;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #000000;
+}
+
+.work-card p {
+    text-align: center;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #000000;
+}
+
+/* ==================================
+   數位作品展間 (Digital Gallery)
+================================== */
+.gallery-section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.image-preview {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    cursor: grab;
+    -webkit-overflow-scrolling: touch;
+}
+
+.image-preview:active {
+    cursor: grabbing;
+}
+
+.image-preview img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: none;
+    flex-shrink: 0;
+}
+
+/* ==================================
+   單件作品區 (collection-section)
+================================== */
+.collection-section {
+    padding-top: 40px;
+    padding-bottom: 80px;
+}
+
+.collection-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+    width: 100%;
+}
+
+/* 將整張卡片的外層連結清除預設樣式 */
+.card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.collection-card {
+    position: relative; 
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    border: 3px solid #DBBBCE;
+    background: #ffffff;
+    border-radius: 12px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.collection-image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
 }
 
-article:hover{
-	cursor:pointer;	
-}
-
-.a_left{
-    position: relative;/*要加這句，more按鍵就會出現在這裡*/
-	float:left;
-	width:50%;
-    height:100%;
-}
-
-.a_left img{
-	float:left;
-	width:100%;
-    height:100%;
-	object-fit:cover;
-}
-
-.a_right{
-	float:left;
-	width:50%;
-    height:100%;
-	padding: 4%;
-	box-sizing:border-box;
-	background:rgba(255, 255, 255, 1);
-	color:rgba(69, 9, 32, 1);
-	text-align:left;
-    line-height: 2rem;
-
-    transition: color 0.5s, background 0.5s;
-	-webkit-transition: color 0.5s, background 0.5s; /*前綴詞*/
-	
-	transition-timing-function:linear;
-	-webkit-transition-timing-function: linear;/* Safari */
-
-}
-
-article:hover .a_right{
-	background:rgba(245, 234, 216, 1);
-    color:rgba(69, 9, 32, 1);
-}
-
-
-article:hover .moreb{
-	opacity:1;
-}
-
-.about-me{
-    height:100%;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    color:rgba(69, 9, 32, 1);
-}
-
-.about-me img{
-    display:block;
-    width:min(100%, 700px);
-    max-height:360px;
-    object-fit:contain;
-}
-
-/*card*//*整齊排列卡片*/
-.card{
-	display:inline-block;
-    margin: 45px;
-	width:24.5%;
-	box-sizing:border-box;
-	padding:10px;
-	text-align:center;
-	cursor:pointer;
-}
-
-.card img{/*整齊排列卡片+碰到會轉動*/
-	width:80%;
-	border-radius:50%;
-	border:solid 1px rgba(69, 9, 32, .2);
-
-    -ms-transform: rotate(0deg);/*IE 9, -ms前綴詞*/
-    -webkit-transform: rotate(0deg);/*Safari-webkit前綴詞*/
-    transform: rotate(odeg);/*Standard syntax*/
-
-    transition: transform 1.5s;/*整齊排列卡片*/
-    -webkit-transition: transform 1.5s;
-}
-
-.card:hover img{/*整齊排列卡片+碰到時會轉動*/
-	-ms-transform: rotate(-20deg); /* IE 9 */
-    -webkit-transform: rotate(-20deg); /* Safari */
-    transform: rotate(-20deg); /* Standard syntax */
-}
-
-
-
-/*footer*/
-footer{
-    clear: both;
+.collection-image img {
     width: 100%;
-    padding: 50px 0px;
+    height: 100%;
+    object-fit: contain;
+}
+
+.collection-card h3 {
+    margin: 15px auto 5px;
+    background: #8DD85D;
+    border-radius: 50px;
+    padding: 5px 10px;
+    text-align: center;
+}
+
+.collection-card p {
+    text-align: center;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* 你特別要求保留的 20度旋轉效果 */
+.collection-card:hover {
+    transform: translateY(-5px) rotate(-5deg);
+    background-color: #DBBBCE;
+    color:#ffffff
+}
+
+/* ==================================
+   撞撞 Logo
+================================== */
+#dvdLogo {
+    position: fixed;
+    top: 100px;
+    left: 100px;
+    width: 90px;
+    height: 90px;
+    z-index: 99999;
+    display: block;
+    cursor: pointer;
+}
+
+#dvdLogo img {
+    width: 150%;
+    height: 150%;
+    object-fit: contain;
+    display: block;
+}
+
+.logo-tooltip {
+    position: absolute;
+    left: 80%;
+    bottom: 60%;
+    transform: translateX(-50%) translateY(-8px);
+    padding: 8px 14px;
+    background-color: #CE8C48;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    white-space: nowrap;
+    border-radius: 20px;
+    visibility: hidden;
+    transition: 0.35s ease;
+    opacity: 0;
+}
+
+#dvdLogo:hover .logo-tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(-12px);
+}
+
+/* ==================================
+   Footer (與分頁相同)
+================================== */
+footer {
+    width: 100%;
+    padding: 40px 20px;
     text-align: center;
     color: #ffffff;
     background: #DB5D8F;
+    margin-top: 50px;
 }
+
+.footer-logos img {
+    width: 120px;
+    height: auto;
+    margin-top: 15px;
+    object-fit: contain;
+}
+
+/* ==================================
+   游標設定
+================================== */
+html, body, body * {
+    cursor: url("../images/cursor.png.PNG") 4 4, auto;
+}
+
+a:active, button:active {
+    cursor: url("../images/cursor-click.png.PNG") 4 4, auto;
+}
+
+/* ==================================
+   全局 RWD (手機與平板適應)
+================================== */
+@media (max-width: 900px) {
+    /* 圖鑑區：變兩欄 */
+    .collection-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    /* 導覽列：改為上下排列 */
+    .menu {
+        flex-direction: column;
+        gap: 15px;
+    }
+    nav {
+        text-align: center;
+    }
+    nav a {
+        display: inline-block;
+        padding: 5px 10px;
+    }
+    body {
+        padding-top: 140px; 
+    }
+}
+
+@media (max-width: 600px) {
+    /* 橫向滾動區 */
+    .works-track {
+        gap: 16px;
+    }
+    .work-card {
+        flex-basis: 75vw; /* 讓手機版一次顯示一張卡片多一點點，提示可以滑動 */
+    }
+    
+    /* 圖鑑區：變單欄 */
+    .collection-grid {
+        grid-template-columns: 1fr;
+    }
+}
+

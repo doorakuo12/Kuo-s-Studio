@@ -1,130 +1,216 @@
 <!doctype html>
 <html>
-
-<head><!--設定頁面基本資訊+外部連結-->
-<meta charset="utf-8">
-<title>Interacyion</title>
-<link href="css/ex2.css" rel="stylesheet" type="text/css">
-<meta name="viewport"
-content=" width=device-width,initial-scale=1.0 ">
+<head>
+    <!--設定頁面基本資訊+外部連結-->
+    <meta charset="utf-8">
+    <title>Interaction - Home</title>
+    <link href="css/ex2.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
+<body>
+    <!-- header -->
+    <header>
+        <div class="menu container">
+            <!-- logo -->
+            <div class="logo">
+                <a href="p2.html">
+                    <img src="images/頭貼.png" alt="Logo">
+                </a>
+            </div>
+        
+            <!-- nav -->
+            <nav>
+                <a href="https://www.behance.net/gallery/250343957/I-Hsuan-Kuo-2026-">PORFOLIO</a>
+                <a href="https://930-eight.vercel.app/#">HOMEWORK</a>
+                <a href="https://youtu.be/68tKopokBLQ?si=5YVxnkWgxxdkfSmK">ANIMATION</a>
+                <a href="https://www.instagram.com/dooraku_o/">INSTAGRAM</a>
+            </nav>
+        </div>    
+    </header>
 
-<body><!--瀏覽器看得見的內容-->
-<!--header-->
-<header>
-    <div class="menu">
-        <!--logo-->
-        <div class="logo">
-            <a href="p2.html">
-            <img src="images/頭貼.png">
+    <!-- hero 一進畫面大圖 -->
+    <div class="hero">
+        <img src="images/hero 影片.MP4" alt="hero">
+    </div>
+
+    <!-- 自我介紹 -->
+    <section class="container intro-section">
+        <h1>★ 我是氣炸鍋，也可以叫我DORA！ ★</h1>
+        <article class="intro-card">
+            <div class="about-me">
+                <img src="images/about me.PNG" alt="Dora Kuo 與角色插畫" />
+                <a class="intro-btn" href="https://ex3-gray.vercel.app">→ 阿兵 & 阿勾的誕生 ←</a>
+                <p>因為喜歡塗鴉，在某一次考卷上偶然畫的角色成為了插畫帳的主角「阿兵」，它們就像我和家中狗狗一起玩耍的故事，用插畫的方式記錄我的生活～</p>
+            </div>
+        </article>
+    </section>
+
+    <!-- 左右換卡片 works-carousel -->
+    <section class="works-carousel container">
+        <h1>★ My Works 我的作品 ★</h1>
+        <div class="works-track" id="worksTrack">
+            <a href="https://www.instagram.com/p/DeguIhAkdnL/?utm_source=ig_web_copy_link&rpxt=MzRlODBiNWFlZA==&srtk=MzRlODBiNWFlZA==" class="work-card">
+                <div class="work-image">
+                    <img src="images/閱讀器.MP4" alt="作品二">
+                </div>
+                <h3>I♡BOOKS</h3>
+                <p>我把閱讀器變可愛了！</p>
+            </a>
+
+            <a href="https://www.instagram.com/p/DPfpLMnEcKZ/?utm_source=ig_web_copy_link&dlrf=MzRlODBiNWFlZA==&srtk=MzRlODBiNWFlZA==" class="work-card">
+                <div class="work-image">
+                    <img src="images/旅日記念T.JPG" alt="作品三">
+                </div>
+                <h3>旅日記念T</h3>
+                <p>日本回憶變成衣服，每次穿都開心！</p>
+            </a>
+
+            <a href="#" class="work-card">
+                <div class="work-image">
+                    <img src="images/擋泥板.jpg" alt="作品四">
+                </div>
+                <h3>獨一無二擋泥板上路</h3>
+                <p>俗話說的好：你不理柴，柴不理你！</p>
+            </a>
+            
+            <a href="https://www.instagram.com/p/CuQyTsOy5wu/?utm_source=ig_web_copy_link&exln=MzRlODBiNWFlZA==&srtk=MzRlODBiNWFlZA==" class="work-card">
+                <div class="work-image">
+                    <img src="images/喫茶店.JPG" alt="作品一">
+                </div>
+                <h3>喫茶店午後</h3>
+                <p>i walk 行動電源聯名</p>
+            </a>
+
+            <a href="https://www.instagram.com/p/DXlzuGTEZE3/?utm_source=ig_web_copy_link&cplk=MzRlODBiNWFlZA==&srtk=MzRlODBiNWFlZA==" class="work-card">
+                <div class="work-image">
+                    <img src="images/RISO.JPG" alt="作品一">
+                </div>
+                <h3>RISO偶ㄉ家</h3>
+                <p>孔版印刷初體驗</p>
             </a>
         </div>
-    
-        <!--nav-->
-        <nav>
-            <a href="https://www.behance.net/gallery/250343957/I-Hsuan-Kuo-2026-">Porfolio</a>
-            <a href="#">Travel</a>
-            <a href="https://930-eight.vercel.app/#">Homework</a>
-            <a href="https://www.instagram.com/dooraku_o/">Ig</a>
-        </nav>
-    </div>    
-</header>
+    </section>
 
-
-<!--hero--><!--hero一進畫面大圖＋字-->
-<div class="hero">
-    <img src="images/hero 影片.MP4" alt="hero">
-</div>
-
-<!--description section-->
-<section>
-    <h1>\ 這裡是氣炸郭 Dora Kuo 廣播 /</h1>
-    <article>
-        <div class="a_center about-me">
-            <img src="images/about me.PNG" alt="Dora Kuo 與角色插畫" />
-            <h2>我是氣炸鍋，也可以叫我DORA！</h2>
-            <p>自我簡短介紹內容</p>
+    <!-- 作品展示區 -->
+    <section class="container gallery-section">
+        <h1>★ Digital Gallery 數位作品展間 ★</h1>
+        <div class="image-preview">
+            <img src="images/網頁大圖.png" alt="完整圖片預覽">
         </div>
-    </article>
-</section>
+    </section>
 
-<!--description section-->
-<section>
-    <h1>★ 插畫經營 ★</h1>
-    <article>
-        <div class="a_center">
-            <img src="images/網頁大圖.png" />
-        </div>
-
-        <div class="a_center">
-            <h2>About basic layout</h2>
-            <p>本範例以網頁版面配置與互動設計為主軸，先透過 position 與 float 練習元素定位、左右排列與基本版面結構，再進一步加入 hover、transition 與簡易 CSS 動畫效果。透過實際操作，理解 HTML 元素與 CSS 樣式之間的關係，並觀察網頁如何從靜態版面逐步發展成具有視覺回饋與互動效果的頁面。</p>
-        </div>
-
-    </article>
-</section>
-
-<!--card section--><!--卡片製作-->
-<section>
-    <h1>★ My Woks 我的作品 ★</h1>
-        <!--card-->
-        <div class="card">
-            <a href="#">
-            <img src="#">
-            <h2>＃KuoKuo飯糰店</h2>
-            <p>more description</p>
+    <!-- collection 圖鑑區 -->
+    <section class="collection-section container">
+        <div class="collection-grid">
+            <a href="https://ex2-gilt.vercel.app" class="card-link">
+                <article class="collection-card"> 
+                    <img src="images/popup7.PNG" class="popup-img" alt="彈出圖案"> 
+                    <div class="collection-image">
+                        <img src="images/飯糰1.JPG" alt="圖鑑一">
+                    </div>
+                    <h3>＃完美飯糰製造所</h3>
+                    <p>一起選出最可愛的海苔飯糰</p>
+                </article>
             </a>
-        </div>
-        <!--card-->
-        <div class="card">
-            <a href="#">
-            <img src="#">
-            <h2>＃</h2>
-            <p>more description</p>
+            
+            <a href="https://youtu.be/Mjx64lebftw?si=WEf3xa4Xut3QRHhw" class="card-link">
+                <article class="collection-card">
+                    <img src="images/popup6.PNG" class="popup-img" alt="彈出圖案">   
+                    <div class="collection-image">
+                        <img src="images/兵勾大富翁.JPG" alt="圖鑑二">
+                    </div>
+                    <h3>＃兵勾大富翁</h3>
+                    <p>一起認識 KUO 的名字起源</p>
+                </article>
             </a>
-        </div>
-        <!--card-->
-        <div class="card">
-            <a href="#">
-            <img src="#">
-            <h2>NAME</h2>
-            <p>more description</p>
+
+            <a href="https://youtu.be/PuPZqJcQjWE?si=f0rbYwtap6WOUgr4" class="card-link">
+                <article class="collection-card">
+                    <img src="images/popup5.PNG" class="popup-img" alt="彈出圖案"> 
+                    <div class="collection-image">
+                        <img src="images/浪漫噴泉.jpg" alt="圖鑑三">
+                    </div>
+                    <h3>＃浪漫噴泉煙火設計</h3>
+                    <p>包裝重新設計，剛剛好的浪漫～</p>
+                </article>
             </a>
-        </div>
-        <!--card-->
-        <div class="card">
-            <a href="#">
-            <img src="images/p4.png">
-            <h2>NAME</h2>
-            <p>more description</p>
+
+            <a href="https://www.behance.net/gallery/222204411/Butterfly-" class="card-link">
+                <article class="collection-card">
+                    <img src="images/popup5.PNG" class="popup-img" alt="彈出圖案"> 
+                    <div class="collection-image">
+                        <img src="images/奶油飛展板.PNG" alt="圖鑑四">
+                    </div>
+                    <h3>紙花瓶設計</h3>
+                    <p>接納所有樣貌，才是愛自己的開始。</p>
+                </article>
             </a>
+            
         </div>
-        <!--card-->
-        <div class="card">
-            <a href="#">
-            <img src="images/p4.png">
-            <h2>NAME</h2>
-            <p>more description</p>
-            </a>
+    </section>
+
+    <!-- 撞撞logo -->
+    <a href="p2.html" id="dvdLogo">
+        <img src="images/今日氣哪玩.png" alt="My Logo">
+        <span class="logo-tooltip"> <!--hover視窗-->
+            查看新系列！
+        </span>
+    </a>
+
+    <!-- java互動 -->
+    <script>
+        const logo = document.getElementById("dvdLogo");
+
+        let x = 100;
+        let y = 100;
+        let speedX = 2.5;
+        let speedY = 2;
+
+        function moveLogo() {
+            // 修復：補上了缺少的減號
+            const maxX = window.innerWidth - logo.offsetWidth;
+            const maxY = window.innerHeight - logo.offsetHeight;
+
+            x += speedX;
+            y += speedY;
+
+            // 左右邊界反彈
+            if (x >= maxX || x <= 0) {
+                speedX *= -1;
+                x = Math.max(0, Math.min(x, maxX));
+            }
+
+            // 上下邊界反彈
+            if (y >= maxY || y <= 0) {
+                speedY *= -1;
+                y = Math.max(0, Math.min(y, maxY));
+            }
+
+            logo.style.left = x + "px";
+            logo.style.top = y + "px";
+
+            requestAnimationFrame(moveLogo);
+        }
+
+        moveLogo();
+
+        // 視窗縮放時重新限制位置
+        window.addEventListener("resize", () => {
+            // 修復：補上了缺少的減號
+            x = Math.min(x, window.innerWidth - logo.offsetWidth);
+            y = Math.min(y, window.innerHeight - logo.offsetHeight);
+        });
+    </script>
+
+    <!-- footer -->
+    <footer>
+        <div class="container">
+            <p>Follow me for more! Ig( 氣炸kuo @dooraku_o ) ✎☺︎&copy;All Right Reserved.</p>
+            <div class="footer-logos">
+                <img src="images/store name.png" alt="logo1">
+            </div>
         </div>
-        <!--card-->
-        <div class="card">
-            <a href="#">
-            <img src="images/p4.png">
-            <h2>NAME</h2>
-            <p>more description</p>
-            </a>
-        </div>
-</section>
-
-
-
-
-
-<!--footer-->
-<footer>Follow me for more! Ig( 氣炸kuo @dooraku_o ) ✎☺︎ &copy;All Right Reserved.</footer>
-
-
+    </footer>
 </body>
 </html>

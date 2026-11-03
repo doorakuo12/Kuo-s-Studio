@@ -1,0 +1,226 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Interaction</title>
+    <!-- 請確認你的 CSS 檔案路徑 -->
+    <link href="css/ex2-p2.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <!-- Header 導覽列 -->
+    <header>
+        <div class="menu container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/頭貼.png" alt="Logo">
+                </a>
+            </div>
+            <nav>
+                <a href="https://www.behance.net/gallery/250343957/I-Hsuan-Kuo-2026-">PORFOLIO</a>
+                <a href="https://930-eight.vercel.app/#">HOMEWORK</a>
+                <a href="https://youtu.be/68tKopokBLQ?si=5YVxnkWgxxdkfSmK">ANIMATION</a>
+                <a href="https://www.instagram.com/dooraku_o/">INSTAGRAM</a>
+            </nav>
+        </div>    
+    </header>
+
+    <!-- 自我介紹 -->
+    <section class="intro-section container">
+        <h1>★ 新系列登場 ★</h1>
+        <article class="intro-card">
+            <div class="play">
+                <img src="images/今日氣哪玩.png" alt="Dora Kuo 與角色插畫" />
+                <h3>太愛玩了，直接出新系列！</h3>
+                <p>人生就是要邊忙邊學習，要是回憶都能被畫下來就永遠都不會忘記了。跟著我一起在日本道路觀察吧，這裡收集了好吃、好玩、好可愛，邀請你加入我的旅程～</p>
+            </div>
+        </article>
+    </section>
+
+    <!-- SECTION 互動筆記本 -->
+    <main class="interactive-page container">
+        <section class="content-section notebook-section">
+            <h1>★ 偶ㄉ相簿 ★</h1>
+            <article class="notebook">
+                <div class="notebook-main">
+                    <!-- 上一頁按鈕 -->
+                    <button class="book-nav" id="bookPrev" aria-label="上一組">
+                        <img src="images/left.png" alt="上一頁">
+                    </button>
+
+                    <!-- 筆記本左右頁 -->
+                    <div class="notebook-spread" id="notebookSpread">
+                        <!-- 左頁 -->
+                        <div class="book-page book-page-left">
+                            <p class="page-label">★★★</p>
+                            <div class="book-image">
+                                <img id="leftPageImage" src="images/book-01.jpg" alt="筆記本左頁">
+                            </div>
+                            <p class="page-caption" id="leftPageCaption">第一頁內容</p>
+                        </div>
+
+                        <!-- 中間塑膠線圈 -->
+                        <div class="notebook-coil" aria-hidden="true">
+                            <i></i><i></i><i></i><i></i><i></i><i></i>
+                            <i></i><i></i><i></i><i></i><i></i><i></i>
+                        </div>
+
+                        <!-- 右頁 -->
+                        <div class="book-page book-page-right">
+                            <p class="page-label">★★★</p>
+                            <div class="book-image">
+                                <img id="rightPageImage" src="images/book-02.png" alt="筆記本右頁">
+                            </div>
+                            <p class="page-caption" id="rightPageCaption">第二頁內容</p>
+                        </div>
+                    </div>
+
+                    <!-- 下一頁按鈕 -->
+                    <button class="book-nav" id="bookNext" aria-label="下一組">
+                        <img src="images/right.png" alt="下一頁">
+                    </button>
+                </div>
+
+                <!-- 頁碼 -->
+                <div class="book-footer">
+                    <span id="bookPageNumber">01–02 / 08</span>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <!-- collection 圖鑑區 -->
+    <section class="collection-section container">
+        <h1>★ Kuoㄉ吃喝玩樂 ★</h1>
+        <div class="collection-grid">
+            <article class="collection-card">
+                <img src="images/popup1.PNG" class="popup-img" alt="彈出圖案">  
+                <div class="collection-image">
+                    <img src="images/吃吃1.JPG" alt="圖鑑一">
+                </div>
+                <h3>吃吃</h3>
+            </article>
+
+            <article class="collection-card">
+                <img src="images/popup2.PNG" class="popup-img" alt="彈出圖案">   
+                <div class="collection-image">
+                    <img src="images/玩耍1.jpg" alt="圖鑑二">
+                </div>
+                <h3>玩玩</h3>
+            </article>
+
+            <article class="collection-card">
+                <img src="images/popup3.PNG" class="popup-img" alt="彈出圖案"> 
+                <div class="collection-image">
+                    <img src="images/筆記本寫生1 .jpg" alt="圖鑑三">
+                </div>
+                <h3>畫畫</h3>
+            </article>
+
+            <article class="collection-card">
+                <img src="images/popup4.PNG" class="popup-img" alt="彈出圖案"> 
+                <div class="collection-image">
+                    <img src="images/買買1.JPG" alt="圖鑑四">
+                </div>
+                <h3>買買</h3>
+            </article>
+        </div>
+    </section>
+
+    <!-- 連圖區 (輪播) -->
+    <section class="long-post container">
+        <h1>★ 玩耍圖鑑 ★</h1>
+        <article>
+            <div class="play-container">
+                <img src="images/日本連圖2.JPG" alt="post" />
+                <img src="images/日本連圖3.JPG" alt="post2" />
+                <img src="images/日本連圖4.JPG" alt="post3" />
+                <img src="images/日本連圖5.JPG" alt="post4" />
+                <img src="images/日本連圖6.JPG" alt="post5" />
+            </div>
+        </article>
+    </section>
+
+    <!-- footer -->
+    <footer>
+        <div class="container">
+            <p>Follow me for more! Ig( 氣炸kuo @dooraku_o ) ✎☺︎&copy;All Right Reserved.</p>
+            <div class="footer-logos">
+                <img src="images/store name.png" alt="logo1">
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript 互動功能 -->
+    <script>
+        // A. 筆記本翻頁功能
+        const bookPages = [
+            { src: "images/日本遊記1.jpg", caption: "和老爸搞怪" },
+            { src: "images/日本遊記2.jpg", caption: "吃吃吃一堆" },
+            { src: "images/日本遊記3.jpg", caption: "local市集挖寶趣" },
+            { src: "images/日本遊記4.jpg", caption: "偶ㄉ包包裡有..." },
+            { src: "images/日本遊記5.jpg", caption: "最愛看動物行程" },
+            { src: "images/日本遊記6.jpg", caption: "飛機餐lover" },
+            { src: "images/日本遊記7.jpg", caption: "繽紛壽司店" },
+            { src: "images/日本遊記8.jpg", caption: "熊本有名の炸豬排" }
+        ];
+
+        let currentPage = 0;
+        const leftImage = document.getElementById("leftPageImage");
+        const rightImage = document.getElementById("rightPageImage");
+        const leftCaption = document.getElementById("leftPageCaption");
+        const rightCaption = document.getElementById("rightPageCaption");
+        const pageNumber = document.getElementById("bookPageNumber");
+        const bookSpread = document.getElementById("notebookSpread");
+        const prevButton = document.getElementById("bookPrev");
+        const nextButton = document.getElementById("bookNext");
+
+        function renderBook() {
+            const totalPages = bookPages.length;
+            const left = bookPages[currentPage];
+            const rightIndex = (currentPage + 1) % totalPages;
+            const right = bookPages[rightIndex];
+
+            leftImage.src = left.src;
+            leftImage.alt = left.caption;
+            leftCaption.textContent = left.caption;
+
+            rightImage.src = right.src;
+            rightImage.alt = right.caption;
+            rightCaption.textContent = right.caption;
+
+            const start = String(currentPage + 1).padStart(2, "0");
+            const end = String(rightIndex + 1).padStart(2, "0");
+            const total = String(totalPages).padStart(2, "0");
+
+            pageNumber.textContent = `${start}–${end} / ${total}`;
+        }
+
+        function turnBook(direction) {
+            const totalPages = bookPages.length;
+            bookSpread.classList.remove("turn-next", "turn-prev");
+            void bookSpread.offsetWidth; // Trigger reflow
+
+            if (direction === "next") {
+                currentPage = (currentPage + 2) % totalPages;
+                bookSpread.classList.add("turn-next");
+            } else {
+                // 修復了原本錯誤的數學運算式
+                currentPage = (currentPage - 2 + totalPages) % totalPages;
+                bookSpread.classList.add("turn-prev");
+            }
+
+            renderBook();
+            setTimeout(() => {
+                bookSpread.classList.remove("turn-next", "turn-prev");
+            }, 600);
+        }
+
+        prevButton.addEventListener("click", () => turnBook("prev"));
+        nextButton.addEventListener("click", () => turnBook("next"));
+
+        renderBook();
+    </script>
+</body>
+</html>

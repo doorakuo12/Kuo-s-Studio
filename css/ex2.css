@@ -427,7 +427,7 @@ a:active, button:active {
 }
 
 /* ==================================
-   全局 RWD (手機與平板適應)
+   RWD 響應式網頁
 ================================== */
 @media (max-width: 900px) {
     /* 圖鑑區：變兩欄 */
@@ -440,17 +440,26 @@ a:active, button:active {
     /* 導覽列：改為上下排列 */
     .menu {
         flex-direction: column;
-        gap: 15px;
+        gap: 5px;
+        padding: 5px 10px;
     }
+
+    .logo {
+        width: 70px;       /* 限制手機版 Logo 的最大寬度 */
+    }
+
     nav {
         text-align: center;
     }
+
     nav a {
         display: inline-block;
-        padding: 5px 10px;
-    }
+        padding: 5px 8px;
+        font-size: 1rem; /* 稍微縮小字體 */
+    } 
+
     body {
-        padding-top: 140px; 
+        padding-top: 110px; 
     }
 }
 
@@ -459,6 +468,7 @@ a:active, button:active {
     .works-track {
         gap: 16px;
     }
+
     .work-card {
         flex-basis: 75vw; /* 讓手機版一次顯示一張卡片多一點點，提示可以滑動 */
     }
